@@ -17,9 +17,9 @@ const SearchBar = ({ handleSubmit }) => {
         <div>
           <input type="text" className={styles.input} value={input} onChange={e=>setInput(e.target.value)}/>
           <select name="" id="" className={styles.select} value={selected} onChange={e=>setSelected(e.target.value)}>
-            <option value="title">By Title</option>
-            <option value="author">By Author</option>
-            <option value="publisher">By Publisher</option>
+            <option value="intitle">By Title</option>
+            <option value="inauthor">By Author</option>
+            <option value="inpublisher">By Publisher</option>
           </select>
         </div>
         <button className={styles.btn }>Search</button>
