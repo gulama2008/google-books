@@ -1,7 +1,7 @@
 @use "../_mixins.scss";
 
 .card {
-  position: relative;
+  // position: relative;
   height: 200px;
   width: 450px;
   display: flex;
@@ -93,7 +93,17 @@
 
 .modal {
   background-color: white;
-  position: absolute;
-  top: 20px;
-  left: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  height: 500px;
+  width: 400px;
+  display: none;
+}
+
+.show_modal{
+  display: block;
 }
