@@ -1,36 +1,65 @@
-.form{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
+@use "../_mixins.scss";
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+
+  @include mixins.md-lg-screen {
+  }
+
+  @include mixins.sm-md-screen {
+  }
 }
 
-.input{
-    outline-color: #420e00;
-    border: none;
-    border-radius: 5px;
-    height: 30px;
-    width: 500px;
-    margin-right: 10px;
-    padding:5px 15px;
+.input {
+  outline-color: #420e00;
+  border: none;
+  border-radius: 5px;
+  height: 30px;
+  width: 500px;
+  margin-right: 10px;
+  padding: 5px 15px;
+
+  @include mixins.md-lg-screen {
+  }
+
+  @include mixins.sm-md-screen {
+    width: 60%;
+  }
 }
 
-.select{
-    border:0;
-    height: 40px;
-    width: 150px;
-    outline: invert;
-    outline-color: #420e00;
-    border-radius: 3px;
+.select {
+  border: 0;
+  height: 40px;
+  width: 150px;
+  outline: invert;
+  outline-color: #420e00;
+  border-radius: 3px;
+
+  @include mixins.md-lg-screen {
+  }
+
+  @include mixins.sm-md-screen {
+    width: 20%;
+  }
 }
 
-.btn{
-    width: 100px;
-    height: 40px;
-    background-color: #420e00;
-    color: #d3cb9e;
-    border: none;
-    border-radius: 5px;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+.input_container {
+  display: flex;
+  justify-content: center;
+}
+
+.btn {
+  width: 100px;
+  height: 40px;
+  background-color: #420e00;
+  color: #d3cb9e;
+  border: none;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  cursor: pointer;
 }

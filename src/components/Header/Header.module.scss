@@ -1,8 +1,37 @@
-.container{
-    color:#2c0603;
+@use '../_mixins.scss';
+
+.container {
+  color: #2c0603;
 }
 
-.header{
-    font-size: 80px;
-    margin: 20px 0px;
+.header {
+  font-size: 80px;
+  margin: 20px 0px;
+  text-align: center;
+  @include mixins.md-lg-screen {
+    width: 80%;
+    margin-top: 30px;
+    text-align: center;
+    font-size: 50px;
+    white-space: nowrap;
+  }
+
+  @include mixins.sm-md-screen {
+    width: 80%;
+    margin-top: 30px;
+    text-align: center;
+    font-size: 35px;
+    white-space: nowrap;
+  }
+}
+
+.sub_header{
+    text-align: center;
+    @include mixins.md-lg-screen {
+    
+  }
+
+  @include mixins.sm-md-screen {
+    font-size: 20px;
+  }
 }

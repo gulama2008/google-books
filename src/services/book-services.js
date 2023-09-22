@@ -4,7 +4,7 @@ export const getBooks = async (searchTerm, searchBy) => {
         throw new Error('Search must have a value')
     }
   const response = await fetch(
-    `https://www.googleapis.com/books/v1/volumes?q=${searchBy}:${searchTerm}&key=${apiKey}`
+    `https://www.googleapis.com/books/v1/volumes?q=''+${searchBy}:${searchTerm}&key=${apiKey}`
   );
     if (!response.ok) { 
         throw new Error('Failed to fetch books')

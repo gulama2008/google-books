@@ -1,0 +1,99 @@
+@use "../_mixins.scss";
+
+.card {
+  position: relative;
+  height: 200px;
+  width: 450px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  margin-bottom: 20px;
+  background-image: url("../../assets/grunge-vintage-old-paper-background.jpg");
+  background-size: cover;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+  @include mixins.md-lg-screen {
+    width: 40%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    // flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  @include mixins.sm-md-screen {
+    width: 80vw;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    // padding: 20px 0px 0px 0px;
+    gap: 30px;
+  }
+}
+
+.img {
+  height: 200px;
+  min-width: 150px;
+  max-width: 150px;
+  //   margin-right: 10px;
+  @include mixins.md-lg-screen {
+    width: 80%;
+    margin-top: 30px;
+  }
+
+  @include mixins.sm-md-screen {
+    width: 80%;
+    margin-top: 30px;
+  }
+}
+
+.info {
+  height: 200px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 0px 20px;
+  @include mixins.md-lg-screen {
+    width: 90%;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  @include mixins.sm-md-screen {
+    width: 90%;
+    justify-content: flex-start;
+    align-items: center;
+  }
+}
+
+.description {
+  min-width: 0;
+  word-wrap: normal;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.title {
+  font-weight: 700;
+  text-align: center;
+}
+
+.author {
+  text-align: center;
+}
+
+.modal {
+  background-color: white;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}

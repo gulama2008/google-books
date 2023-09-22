@@ -14,7 +14,7 @@ function App() {
     <div className={ styles.container}>
       <Header />
       <SearchBar handleSubmit={ onSearchSubmit} />
-      <BookLoader/>
+      <BookLoader searchData={ searchData} />
     </div>
   )
 }
