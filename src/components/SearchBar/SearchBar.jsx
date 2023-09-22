@@ -14,7 +14,7 @@ const SearchBar = ({ handleSubmit }) => {
   return (
     <>
       <form className={ styles.form} onSubmit={onSubmit}>
-        <div>
+        <div className={ styles.input_container}>
           <input type="text" className={styles.input} value={input} onChange={e=>setInput(e.target.value)}/>
           <select name="" id="" className={styles.select} value={selected} onChange={e=>setSelected(e.target.value)}>
             <option value="intitle">By Title</option>
