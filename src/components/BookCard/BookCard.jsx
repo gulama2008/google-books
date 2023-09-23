@@ -17,10 +17,10 @@ const BookCard = ({ book }) => {
     console.log(isModalDisplay);
     setIsModalDisplay(false);
     e.stopPropagation();
-    console.log('testtest');
+    console.log("testtest");
     console.log(isModalDisplay);
   };
-  console.log(isModalDisplay,'test');
+  console.log(isModalDisplay, "test");
 
   return (
     <div className={styles.card} onClick={openModal}>
@@ -43,7 +43,13 @@ const BookCard = ({ book }) => {
           " "
         )}
       >
-        <div onClick={closeModal}>X</div>
+        <div onClick={closeModal} className={styles.show_modal_close}>
+          <img
+            src="src/assets/close.png"
+            alt=""
+            className={styles.show_modal_close_icon}
+          />
+        </div>
         <img
           src={
             bookInfo.imageLinks
@@ -51,33 +57,29 @@ const BookCard = ({ book }) => {
               : "src/assets/no-img.jpeg"
           }
           alt=""
-          className={styles.img}
+          className={styles.show_modal_img}
         />
-        <div className={styles.info}>
-          <p className={styles.title}>
-            <span className={styles.bold}>Title: </span>
-            {bookInfo.title}
-          </p>
-          <p className={styles.author}>
-            <span>Author: </span>
-            {bookInfo.authors}
-          </p>
-          <p className={styles.description}>
-            <span>Description: </span>
-            {bookInfo.description}
-          </p>
+        <div className={styles.show_modal_info}>
+          <h4 className={styles.show_modal_info_title}>Title:</h4>
+          <p>{bookInfo.title}</p>
+          <h4>Author:</h4>
+          <p>{bookInfo.authors}</p>
+          <h4>Language:</h4>
+          <p>{bookInfo.language}</p>
+          <h4>Published Date:</h4>
+          <p>{bookInfo.publishedDate}</p>
+          <h4>Preview Link:</h4>
           <p>
-            <span>Language: </span> {bookInfo.language}
+            <a href={bookInfo.previewLink}>Preview</a>
           </p>
-          <p>
-            <span>PublishedDate: </span> {bookInfo.publishedDate}
-          </p>
-          <p>
-            <span>Preview Link: </span> <a href={bookInfo.previewLink}>Preview</a>
-          </p>
-          <p>
-            <span>Publisher: </span> {bookInfo.publisher}
-          </p>
+          <h4>Publisher:</h4>
+          <p>{bookInfo.publisher}</p>
+          <h4 className={styles.show_modal_info_description}>Description:</h4>
+          <div className={ styles.description_content}>
+            {bookInfo.description
+              ? bookInfo.description
+              : "No description for this book"}
+          </div>
         </div>
       </div>
     </div>
