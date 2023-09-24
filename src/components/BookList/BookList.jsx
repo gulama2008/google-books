@@ -2,11 +2,11 @@ import React from "react";
 import BookCard from "../BookCard/BookCard";
 import styles from './BookList.module.scss'
 
-const BookList = ({ books }) => {
+const BookList = ({ bookData }) => {
     return (
       <>
         <ul className={styles.bookList}>
-          {books.map((book) => (
+          {bookData.items.map((book) => (
             
               <BookCard book={book} />
            
