@@ -8,11 +8,7 @@ const SearchBar = ({ searchData,updateSearchData }) => {
     e.preventDefault();
     const maxResult = searchData?.maxResult ? searchData.maxResult : 12;
     const newSearchData = { ...searchData, searchTerm: searchTerm, searchBy: searchBy,startIndex:0,maxResult:maxResult};
-    console.log(newSearchData);
     updateSearchData(newSearchData);
-    console.log(searchTerm);
-    console.log(searchBy);
-    // setInput('');
   }
   return (
     <>

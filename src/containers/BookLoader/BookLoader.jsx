@@ -4,12 +4,9 @@ import BookList from "../../components/BookList/BookList";
 import styles from "./BookLoader.module.scss";
 
 const BookLoader = ({ searchData, bookData, updateBookData,updateHasNextPage }) => {
-  // const [books, setBooks] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   
-  console.log("bookloader run");
-  console.log(searchData);
   useEffect(() => {
     if (searchData === null) {
       return;

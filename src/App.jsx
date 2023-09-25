@@ -12,11 +12,9 @@ function App() {
   const [hasNextPage, setHasNextPage] = useState(true);
 
   const updateSearchData = (data) => {
-    console.log(data);
     setSearchData(data);
   };
   const updateBookData = (data) => {
-    console.log(data);
     setBookData(data);
   };
   const updateHasNextPage = (data) => { 

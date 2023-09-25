@@ -7,7 +7,6 @@ const PageOption = ({ searchData,updateSearchData,className }) => {
         const newSearchData = { ...searchData, maxResult: currentMaxResult };
         updateSearchData(newSearchData);
     }
-    console.log('pageoption run');
   return (
       <form className={className}>
           <label htmlFor="pageOption">Results per page</label>

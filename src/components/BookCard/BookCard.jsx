@@ -3,26 +3,15 @@ import styles from "./BookCard.module.scss";
 
 const BookCard = ({ book }) => {
   const bookInfo = book.volumeInfo;
-  // console.log('bookcard run');
-  // console.log(bookInfo);
-
   const [isModalDisplay, setIsModalDisplay] = useState(false);
-  // console.log(isModalDisplay);
   const openModal = () => {
-    console.log(isModalDisplay);
-    console.log(book.volumeInfo);
     setIsModalDisplay(true);
   };
 
   const closeModal = (e) => {
-    console.log("close modal");
-    console.log(isModalDisplay);
     setIsModalDisplay(false);
     e.stopPropagation();
-    console.log("testtest");
-    console.log(isModalDisplay);
   };
-  // console.log(isModalDisplay, "test");
 
   return (
     <div className={styles.card} onClick={openModal}>

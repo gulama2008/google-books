@@ -8,9 +8,7 @@ const BookList = ({ bookData }) => {
       <>
         <ul className={styles.bookList}>
           {bookData.items.map((book) => (
-            
               <BookCard book={book} key={bookData.id}/>
-           
           ))}
         </ul>
       </>
