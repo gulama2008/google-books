@@ -1,0 +1,28 @@
+@use "../_mixins.scss";
+
+.btn_container {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  gap: 50px;
+  margin-bottom: 20px;
+  margin-right: 80px;
+  @include mixins.md-lg-screen {
+    justify-content: center;
+    gap: 50px;
+  }
+
+  @include mixins.sm-md-screen {
+    justify-content: center;
+    margin-right: 0px;
+  }
+}
+
+.btn {
+  height: 30px;
+  width: 100px;
+  border: none;
+  border-radius: 5px;
+  background-color: #420e00;
+  color: #d3cb9e;
+}

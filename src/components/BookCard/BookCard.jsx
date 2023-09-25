@@ -3,12 +3,14 @@ import styles from "./BookCard.module.scss";
 
 const BookCard = ({ book }) => {
   const bookInfo = book.volumeInfo;
-  console.log(bookInfo);
+  // console.log('bookcard run');
+  // console.log(bookInfo);
 
   const [isModalDisplay, setIsModalDisplay] = useState(false);
-  console.log(isModalDisplay);
+  // console.log(isModalDisplay);
   const openModal = () => {
     console.log(isModalDisplay);
+    console.log(book.volumeInfo);
     setIsModalDisplay(true);
   };
 
@@ -20,7 +22,7 @@ const BookCard = ({ book }) => {
     console.log("testtest");
     console.log(isModalDisplay);
   };
-  console.log(isModalDisplay, "test");
+  // console.log(isModalDisplay, "test");
 
   return (
     <div className={styles.card} onClick={openModal}>

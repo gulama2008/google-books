@@ -1,0 +1,12 @@
+@use "../_mixins.scss";
+
+.select {
+  width: 100px;
+  margin-left: 10px;
+  border: none;
+  border-radius: 5px;
+  outline-color: #420e00;
+  @include mixins.sm-md-screen {
+    font-size: 12px;
+  }
+}
