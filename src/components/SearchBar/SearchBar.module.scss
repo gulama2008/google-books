@@ -1,4 +1,6 @@
 @use "../_mixins.scss";
+@use '../_palette.scss';
+
 .form {
   display: flex;
   flex-direction: column;
@@ -14,7 +16,7 @@
 }
 
 .input {
-  outline-color: #420e00;
+  outline-color: palette.$secondary-color;
   border: none;
   border-radius: 5px;
   height: 30px;
@@ -38,7 +40,7 @@
   height: 40px;
   width: 150px;
   outline: invert;
-  outline-color: #420e00;
+  outline-color: palette.$secondary-color;
   border-radius: 3px;
 
   @include mixins.md-lg-screen {
@@ -59,8 +61,8 @@
 .btn {
   width: 100px;
   height: 40px;
-  background-color: #420e00;
-  color: #d3cb9e;
+  background-color: palette.$secondary-color;
+  color: palette.$button-text;
   border: none;
   border-radius: 5px;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,

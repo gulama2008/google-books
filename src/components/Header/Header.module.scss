@@ -1,7 +1,8 @@
 @use '../_mixins.scss';
+@use '../_palette.scss';
 
 .container {
-  color: #2c0603;
+  color: palette.$main-color;
 }
 
 .header {

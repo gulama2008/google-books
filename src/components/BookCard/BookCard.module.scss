@@ -1,7 +1,7 @@
 @use "../_mixins.scss";
+@use "../_palette.scss";
 
 .card {
-  // position: relative;
   height: 200px;
   width: 450px;
   display: flex;
@@ -20,7 +20,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    // flex-wrap: wrap;
     gap: 30px;
   }
 
@@ -31,7 +30,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    // padding: 20px 0px 0px 0px;
     gap: 30px;
   }
 }
@@ -40,7 +38,6 @@
   height: 200px;
   min-width: 150px;
   max-width: 150px;
-  //   margin-right: 10px;
   @include mixins.md-lg-screen {
     width: 80%;
     margin-top: 30px;
@@ -74,14 +71,6 @@
   }
 }
 
-// .description {
-//   min-width: 0;
-//   word-wrap: normal;
-//   white-space: nowrap;
-//   overflow: hidden;
-//   text-overflow: ellipsis;
-// }
-
 .title {
   font-weight: 700;
   text-align: center;
@@ -92,7 +81,7 @@
 }
 
 .modal {
-  background-color: #f7f1e7;
+  background-color: palette.$modal-background;
   position: fixed;
   top: 0;
   left: 0;
@@ -124,18 +113,13 @@
   }
   &_img {
     height: 200px;
-  min-width: 150px;
-  max-width: 150px;
+    min-width: 150px;
+    max-width: 150px;
     align-self: center;
     margin-bottom: 10px;
   }
   &_info {
     padding: 10px 20px;
-    // display: flex;
-    // flex-direction: column;
-    // justify-content: center;
-    
-    // gap: 15px;
     display: grid;
     grid-template-columns: 1fr 2fr;
     row-gap: 10px;
@@ -144,6 +128,6 @@
   }
 }
 
-.description_content{
+.description_content {
   line-height: 25px;
 }
