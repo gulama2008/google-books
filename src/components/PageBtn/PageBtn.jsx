@@ -1,31 +1,42 @@
-import React, { useState } from 'react'
-import styles from './PageBtn.scss';
+import React, { useState } from "react";
+import styles from "./PageBtn.module.scss";
 
-const PageBtn = ({ searchData, updateSearchData,bookData}) => {
-    console.log('pagebtn run');
-    const [startIndex, setStartIndex] = useState(0);
-    // updateSearchData({ ...searchData, startIndex: startIndex });
-    const totalItems = bookData?.totalItems;
-    console.log(totalItems);
-    console.log(searchData?.startIndex);
-    console.log(searchData?.startIndex==0);
-    const nextPage = () => {
-        const currentMaxResult = searchData.maxResult;
-        setStartIndex(parseInt(startIndex) + parseInt(currentMaxResult));
-        const newSearchData = { ...searchData, startIndex: startIndex };
-        console.log(newSearchData);
-      updateSearchData(newSearchData);
+const PageBtn = ({ searchData, updateSearchData, bookData }) => {
+  console.log("pagebtn run");
+  const [startIndex, setStartIndex] = useState(0);
+  const totalItems = bookData.totalItems;
+
+  const nextPage = () => {
+    const newStartIndex=parseInt(searchData.maxResult)+parseInt(searchData.startIndex);
+    const newSearchData = {
+      ...searchData,
+      startIndex: newStartIndex,
     };
-    const previousPage = () => { 
-        const currentMaxResult = searchData.maxResult;
-        setStartIndex(startIndex - currentMaxResult);
-        const newSearchData = { ...searchData, startIndex: startIndex };
-        updateSearchData(newSearchData);
-    }
-    return <div>
-        <button onClick={previousPage} disabled={ searchData?.startIndex==0}>Previous Page</button>
-      <button onClick={nextPage}>Next Page</button>
-  </div>;
+    updateSearchData(newSearchData);
+    setStartIndex(newStartIndex);
+  };
+  const previousPage = () => {
+    const currentMaxResult = searchData.maxResult;
+    setStartIndex(startIndex - currentMaxResult);
+    const newSearchData = { ...searchData, startIndex: startIndex };
+    updateSearchData(newSearchData);
+  };
+  return (
+    <div className={styles.btn_container}>
+      <button onClick={previousPage} disabled={!searchData.startIndex} className={ styles.btn}>
+        Previous
+      </button>
+      <button
+        onClick={nextPage}
+        disabled={
+          searchData.startIndex == Math.round(totalItems / searchData.maxResult)
+        }
+        className={ styles.btn}
+      >
+        Next
+      </button>
+    </div>
+  );
 };
 
-export default PageBtn
+export default PageBtn;

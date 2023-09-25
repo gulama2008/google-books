@@ -13,7 +13,7 @@ const BookLoader = ({ searchData, bookData, updateBookData }) => {
     if (searchData === null) {
       return;
     }
-    const { searchTerm, searchBy, maxResult = 10, startIndex = 0 } = searchData;
+    const { searchTerm, searchBy, maxResult, startIndex} = searchData;
     setLoading(true);
     setError(null);
     getBooks(searchTerm, searchBy, maxResult, startIndex)

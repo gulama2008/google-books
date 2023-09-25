@@ -4,4 +4,8 @@
     align-items: center;
     justify-content: center;
     gap: 50px;
+    &_pageOption{
+        align-self: flex-end;
+        margin-right: 60px;
+    }
 }

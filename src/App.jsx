@@ -18,10 +18,11 @@ function App() {
   };
   return (
     <div className={styles.container}>
-      <Header />
+      <Header/>
       <SearchBar searchData={searchData} updateSearchData={updateSearchData} />
       {bookData && (
         <PageOption
+          className={ styles.container_pageOption}
           searchData={searchData}
           updateSearchData={updateSearchData}
         />
