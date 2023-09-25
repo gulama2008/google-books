@@ -9,13 +9,19 @@ import PageBtn from "./components/PageBtn/PageBtn";
 function App() {
   const [searchData, setSearchData] = useState(null);
   const [bookData, setBookData] = useState(null);
+  const [hasNextPage, setHasNextPage] = useState(true);
+
   const updateSearchData = (data) => {
     console.log(data);
     setSearchData(data);
   };
   const updateBookData = (data) => {
+    console.log(data);
     setBookData(data);
   };
+  const updateHasNextPage = (data) => { 
+    setHasNextPage(data);
+  }
   return (
     <div className={styles.container}>
       <Header/>
@@ -31,12 +37,14 @@ function App() {
         searchData={searchData}
         bookData={bookData}
         updateBookData={updateBookData}
+        updateHasNextPage={ updateHasNextPage}
       />
       {bookData && (
         <PageBtn
           searchData={searchData}
           updateSearchData={updateSearchData}
           bookData={bookData}
+          hasNextPage={ hasNextPage}
         />
       )}
     </div>

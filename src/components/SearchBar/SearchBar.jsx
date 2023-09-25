@@ -6,7 +6,7 @@ const SearchBar = ({ searchData,updateSearchData }) => {
   const [searchBy, setSearchBy] = useState('intitle');
   const onSubmit = (e) => { 
     e.preventDefault();
-    const maxResult = searchData?.maxResult ? searchData.maxResult : 10;
+    const maxResult = searchData?.maxResult ? searchData.maxResult : 12;
     const newSearchData = { ...searchData, searchTerm: searchTerm, searchBy: searchBy,startIndex:0,maxResult:maxResult};
     console.log(newSearchData);
     updateSearchData(newSearchData);

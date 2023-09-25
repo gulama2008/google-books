@@ -77,7 +77,7 @@ const BookCard = ({ book }) => {
           <h4>Publisher:</h4>
           <p>{bookInfo.publisher}</p>
           <h4 className={styles.show_modal_info_description}>Description:</h4>
-          <div className={ styles.description_content}>
+          <div className={styles.description_content}>
             {bookInfo.description
               ? bookInfo.description
               : "No description for this book"}
