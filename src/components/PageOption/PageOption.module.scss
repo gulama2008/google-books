@@ -1,0 +1,13 @@
+@use "../_mixins.scss";
+@use '../_palette.scss';
+
+.select {
+  width: 100px;
+  margin-left: 10px;
+  border: none;
+  border-radius: 5px;
+  outline-color: palette.$secondary-color;;
+  @include mixins.sm-md-screen {
+    font-size: 12px;
+  }
+}

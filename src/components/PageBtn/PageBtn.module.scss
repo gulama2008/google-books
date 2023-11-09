@@ -1,0 +1,32 @@
+@use "../_mixins.scss";
+@use '../_palette.scss';
+
+.btn_container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 20px;
+  @include mixins.md-lg-screen {
+    gap: 50px;
+  }
+
+  @include mixins.sm-md-screen {
+    justify-content: center;
+    margin-right: 0px;
+  }
+}
+
+.btn {
+  height: 35px;
+  width: 100px;
+  border: none;
+  border-radius: 5px;
+  background-color: palette.$secondary-color;
+  color: palette.$button-text;
+  cursor: pointer;
+  &:disabled{
+    background-color:palette.$button-color-disabled;
+    cursor:default;
+  }
+}
