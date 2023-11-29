@@ -20,12 +20,6 @@ Overview
 ![over biew](./src/assets/book1.png)
 Book details 
 ![book details](./src/assets/details.png)
-Product details page  
-![product page](./src/assets/6.png)
-Cart/Checkout page  
-![cart page](./src/assets/3.png)
-Favourite items page  
-![favourites page](./src/assets/5.png)
 
 ## Purpose Of Project
 This project will require you to use both DOM manipulation and Asynchronous programming. The aim is for the user to be able to search for a book inside the Google Books database and to be able to get more details about a certain title.
